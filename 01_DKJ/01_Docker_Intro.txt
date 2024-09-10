@@ -1,0 +1,152 @@
+Docker
++++++++
+
+1) What is an application ?
+2) Application Tech Stack
+3) Application Architecture
+4) Life without Docker
+5) Life with Docker
+6) What is Docker?
+7) What is Virtualization?
+8) What is Containerization?
+9) Docker Architecture
+
+
+Application
+++++++++++++
+
+=> Application is nothing but collection of programs
+
+=> Every application contains 3 layers
+
+        1) Presentation layers (Frontedn (UI))
+        2) Backend (Business logic)
+        3) Database
+
+
+=========================
+Application Environment
+=========================
+
+=> In Realtime,  our application will be deployed into multiple environments for testing purpose
+
+    1) DEV Env [Developers Testing]
+    2) SIT Env [Testing Team (QA)]
+    3) UAT Env [Client Side Testing]
+    4) PILOT Env (Pre-Prodcution)  [Testing with live data]
+
+=> Once testing completed in all above envs that it will be deploued into production Env.
+
+=> Prodcution env means live environment.
+
+=> End users will access application from production env.
+
+
+=====================
+Life without Docker
+=====================
+
+=> We need to install required s/w in all environments to run our application.
+
+=> We need to make sure we are using same versions of s/w in all machines.
+
+=> If any s/w version is not matched then application execution may fail.
+
+    Ex : Rancho installed Java 11v in Dev Env
+         Raju installed Java 8v in SIT Env
+
+=> If we want to run ourp application in multiple machines then we have to install required softwares in all those machines which is hectic task.
+
+
+===================
+Life with Docker
+=================== 
+
+=> Docker is a containerization platform
+
+=> Docker is used to build and deploy our application into any machine without bothering about dependencies.
+
+=> Dependencies means the s/w which are required to run our application.
+
+        Dependencies = OS/ Angula/ React/ Java/ DB/ Tomcat etc...
+
+
+=> Docker will redeuce the gap between development and deployment.
+
+
+
+Docker Architecture
+=====================
+
+
+1) Dockerfi le : It contains instructions to build docker image
+
+2) Docker Image : It is a package which contains code + dependencies
+
+3) Docker Registry : It is a repository to store docker images
+
+4) Docker Container : It is a runtime process which runs our application.
+
+
+Note : Once Docker image is created then we can pull that image and we can run that image in any machine.
+
+
+Virtualization
+==============
+
+
+-> Installing Multiple Gues Operating System in one Host Operating System.
+
+-> Hypervisor s/w will be used to achieve this.
+
+-> We need to install all the required s/w in Host OS to run our application.
+
+-> It is old technique to run the application.
+
+-> System performance will become slow in this processs.
+
+-> To overcome the problems of Virtualization we are going for containerizationconcept.
+
+
+
+Containerization
+==================
+
+-> It is used to package all the s/w and application code in one container for execution.
+
+-> container will take care of everything which is required to run our application.
+
+-> we can run the containers in multiple machines easily.
+
+-> Docker is a containerization software.
+
+-> Using Docker we will create container for our application.
+
+-> Using Docker we will create image for our application.
+
+-> Docker images we can share easily to multiple machines.
+
+-> Using Docker image we can create container and we can execute it.
+
+
+
+Docker Installation
+===================
+
+sudo apt update -y
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+apt-cache policy docker-ce
+sudo apt install docker-ce 
+sudo systemctl status docker
+
+#add user to docker group 
+sudo usermod -aG docker ubuntu
+sudo usermod -aG docker ${USER}
+
+#Restart the session
+exit 
+
+docker info 
+docker -v
