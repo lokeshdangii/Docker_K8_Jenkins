@@ -134,19 +134,37 @@ Docker Installation
 ===================
 
 sudo apt update -y
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-apt-cache policy docker-ce
-sudo apt install docker-ce 
+sudo apt install docker.io -y
 sudo systemctl status docker
 
 #add user to docker group 
 sudo usermod -aG docker ubuntu
 sudo usermod -aG docker ${USER}
 
+#Got permission denied while trying to connect to the Docker daemon socket
+sudo chmod 666 /var/run/docker.sock
+
 #Restart the session
 exit 
 
 docker info 
 docker -v
+
+
+
+=> If the below error comes in ubuntu then follow the below steps
+
+error => exec: "docker-credential-desktop.exe": executable file not found in $PATH
+
+=========
+Solution
+=========
+
+For Arch Linux edit the ~/.docker/config.json file and paste this code
+
+{
+    "auths": {},
+    "credStore": "desktop",
+    "currentContext": "default"
+}
+basically change credsStore to credStore
