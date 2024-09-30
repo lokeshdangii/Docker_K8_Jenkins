@@ -455,7 +455,7 @@ Q) What is the difference between CMD and ENTRYPOINT ?
 
 
 
-=========
+========
 WORKDIR
 ========
 
@@ -467,7 +467,7 @@ Syntax:
 
 WORKDIR /app/usr/
 
-========
+=======
 ENV
 =======
 
@@ -977,7 +977,7 @@ networks:
 
 ===================================
 Stateful Vs Stateless Containers
-====================================
+===================================
 
 Stateless container : Data will be deleted after container got deleted
 
@@ -1284,11 +1284,6 @@ $ sudo docker service --name <service-name> -p 8080:8080 <img-name>
 $ sudo docker service scale <service-name = replicas
 $ sudo docker service ls
 $ sudo docker service rm <service-name>
-
-
-
-
-
 
 
 

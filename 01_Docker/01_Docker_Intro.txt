@@ -1,5 +1,5 @@
 Docker
-+++++++
+++++++
 
 1) What is an application ?
 2) Application Tech Stack
@@ -28,14 +28,14 @@ Application
 Application Environment
 =========================
 
-=> In Realtime,  our application will be deployed into multiple environments for testing purpose
+=> In Realtime, our application will be deployed into multiple environments for testing purpose
 
     1) DEV Env [Developers Testing]
     2) SIT Env [Testing Team (QA)]
     3) UAT Env [Client Side Testing]
     4) PILOT Env (Pre-Prodcution)  [Testing with live data]
 
-=> Once testing completed in all above envs that it will be deploued into production Env.
+=> Once testing completed in all above envs that it will be deployed into production Env.
 
 => Prodcution env means live environment.
 
@@ -55,7 +55,7 @@ Life without Docker
     Ex : Rancho installed Java 11v in Dev Env
          Raju installed Java 8v in SIT Env
 
-=> If we want to run ourp application in multiple machines then we have to install required softwares in all those machines which is hectic task.
+=> If we want to run our application in multiple machines then we have to install required softwares in all those machines which is hectic task.
 
 
 ===================
@@ -71,7 +71,7 @@ Life with Docker
         Dependencies = OS/ Angula/ React/ Java/ DB/ Tomcat etc...
 
 
-=> Docker will redeuce the gap between development and deployment.
+=> Docker will reduce the gap between development and deployment.
 
 
 
@@ -79,7 +79,7 @@ Docker Architecture
 =====================
 
 
-1) Dockerfi le : It contains instructions to build docker image
+1) Dockerfile : It contains instructions to build docker image
 
 2) Docker Image : It is a package which contains code + dependencies
 
