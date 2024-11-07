@@ -168,3 +168,13 @@ For Arch Linux edit the ~/.docker/config.json file and paste this code
     "currentContext": "default"
 }
 basically change credsStore to credStore
+
+
+
+
+====================================================================================
+The sample application is a Spring Boot application built using Maven. For more details, see readme.md in the repository.
+
+git clone https://github.com/spring-projects/spring-petclinic.git
+
+====================================================================================
