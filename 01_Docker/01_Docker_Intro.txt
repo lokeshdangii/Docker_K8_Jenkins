@@ -105,7 +105,7 @@ Virtualization
 
 -> System performance will become slow in this processs.
 
--> To overcome the problems of Virtualization we are going for containerizationconcept.
+-> To overcome the problems of Virtualization we are going for containerization concept.
 
 
 

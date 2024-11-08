@@ -97,7 +97,7 @@ Kubernetes Cluster Setup
 
 		b) Kubeadm  (Multi Node Cluster)
 
-2) Provider Managed Cluster (Cloud Provide will give read made cluster) ---> Charges applies
+2) Provider Managed Cluster (Cloud Provide will give ready made cluster) ---> Charges applies
 
 		a) AWS EKS
 
@@ -466,7 +466,7 @@ POD Life Cycle
 
 -> Node Agent (kubelet) will see POD schedule and it will fire Docker Engine
 
--> Docker will engine will run our container
+-> Docker engine will run our container
 
 Note: PODS are ephemeral (Short Lived Objects)
 
@@ -605,7 +605,7 @@ $ kubectl get pods
 
 -> POD is not recreated because we have created POD manually
 
-########### It is not all recommended to create PODS manually ###############
+########### It is not at all recommended to create PODS manually ###############
 
 => Always we need to create the PODS using below K8S components/resources
 
